@@ -1,0 +1,226 @@
+/* Shared finish for the October workspace screens. Loaded after legacy styles. */
+#main-content:has(>.task-board-page),
+#main-content:has(>.reports-page),
+#main-content:has(>.admin-page){padding:0;overflow:visible}
+.task-board-page.task-board-refined,
+.reports-page.ops-page,
+.admin-page.ops-page{padding:22px 24px 28px;max-width:none;margin:0;min-height:0;color:var(--ink)}
+.task-board-refined .task-board-header,
+.reports-page .ops-heading,
+.admin-page .admin-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:0 0 20px}
+.task-board-refined .task-board-header h1,
+.reports-page .ops-heading h1,
+.admin-page .admin-heading h1{font-family:Manrope,'DM Sans',sans-serif;font-size:28px;line-height:1.25;letter-spacing:-1px;color:var(--ink);margin:0 0 6px}
+.task-board-refined .task-board-header p,
+.reports-page .ops-heading p,
+.admin-page .admin-heading p{font-size:12px;line-height:1.6;color:var(--ink2);margin:0;max-width:65ch}
+.followup-eyebrow,.admin-eyebrow,.reports-page .ops-eyebrow{color:#69803d;font-size:10px;letter-spacing:.13em;font-weight:750;margin:0 0 7px}
+:is(.task-board-refined,.reports-page,.admin-page) .btn{min-height:38px;padding:8px 13px;font-size:12px;border-radius:8px}
+:is(.task-board-refined,.reports-page,.admin-page) svg{width:17px;height:17px;flex:none}
+:is(.task-board-refined,.reports-page,.admin-page) :is(h1,h2,h3,p,small,strong){overflow-wrap:anywhere}
+:is(.reports-page,.admin-page) .ops-surface{border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:var(--shadow);backdrop-filter:none}
+:is(.reports-page,.admin-page) :is(.ops-section-head,.admin-section-head){padding:16px 18px;gap:14px;border-color:var(--line)}
+:is(.reports-page,.admin-page) :is(.ops-section-head,.admin-section-head) h2{font-size:14px;color:var(--ink);margin:0}
+:is(.reports-page,.admin-page) :is(.ops-section-head,.admin-section-head) :is(p,span){font-size:11px;color:var(--ink2);margin:4px 0 0}
+:is(.reports-page,.admin-page) :is(.ops-section-head,.admin-section-head) button{display:inline-flex;align-items:center;gap:6px;flex:none;min-height:32px;color:var(--forest)}
+.admin-member-avatar{display:inline-grid;place-items:center;width:34px;height:34px;flex:none;border-radius:10px;background:var(--lime-soft);color:var(--forest);font-size:11px;font-weight:750;overflow:hidden}
+.admin-member-avatar.has-portrait{background:#fff;border:1px solid var(--line)}
+.admin-member-avatar img{display:block;width:100%;height:100%;object-fit:cover}
+.task-board-refined .task-team-view{padding:12px;border:1px solid var(--line);background:#f7f8f0;box-shadow:none;border-radius:12px;margin:0 0 12px}
+.task-board-refined .task-team-view-heading{margin-bottom:9px;gap:12px;flex-direction:row;align-items:center}
+.task-board-refined .task-team-view-heading>span{font-size:10px;color:#627748}
+.task-board-refined .task-team-view-heading>small{font-size:11px;color:var(--ink2)}
+.task-board-refined .task-team-cards{gap:8px;padding:2px 2px 6px;scrollbar-width:thin;scrollbar-color:#b7c3a6 transparent}
+.task-board-refined .task-team-cards::-webkit-scrollbar{display:block;height:5px}
+.task-board-refined .task-team-cards::-webkit-scrollbar-thumb{background:#b7c3a6;border-radius:6px}
+.task-board-refined .task-team-card{flex:0 0 auto;min-width:145px;max-width:240px;gap:9px;padding:9px 12px;border-radius:9px;border-color:var(--line);box-shadow:none;transform:none}
+.task-board-refined .task-team-card:hover{background:#f5f8ec;border-color:#bac8a4}
+.task-board-refined .task-team-card.active{background:var(--lime-soft);border-color:var(--forest);box-shadow:inset 0 0 0 1px var(--forest)}
+.task-board-refined .task-team-copy strong{font-size:12px;color:var(--forest);font-weight:750}
+.task-board-refined .task-team-copy small{font-size:11px;color:#69765f;margin-top:3px}
+.task-team-all-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--forest);color:var(--lime);flex:none}
+.task-board-toolbar{display:flex;align-items:center;gap:8px;margin:0 0 14px;flex-wrap:wrap}
+.task-board-search{display:flex;align-items:center;gap:8px;flex:1 1 240px;min-width:0;border:1px solid var(--line);border-radius:8px;background:#fff;padding:0 11px;height:38px;color:var(--ink2)}
+.task-board-search:focus-within{outline:2px solid var(--success);outline-offset:2px}
+.task-board-search input{width:100%;min-width:0;background:none;border:0;outline:none!important;font:inherit;font-size:12px;color:var(--ink)}
+.task-board-toolbar select,.report-window select{max-width:100%;min-height:38px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);padding:7px 28px 7px 10px;font:inherit;font-size:12px}
+.task-board-refined .task-board-grid{display:grid;grid-template-columns:repeat(5,minmax(205px,1fr));gap:10px;padding:0 0 10px;margin:0;width:100%;height:clamp(360px,calc(100dvh - 320px),850px);min-height:360px;max-height:none;overflow-x:auto;overflow-y:hidden;align-items:stretch;border-radius:0;scrollbar-width:thin;scrollbar-color:#a5b99b transparent}
+.task-board-refined .task-board-lane{min-width:0;height:100%;min-height:0;border-radius:11px;border:1px solid var(--line);background:#f7f7f1}
+.task-board-refined .task-board-lane>header{flex:none;padding:13px 12px;background:#f9faf5;border-bottom:1px solid var(--line)}
+.task-board-refined .task-board-lane>header strong{font-size:12px;color:var(--forest)}
+.task-board-refined .task-board-lane>header small{font-size:10px;color:var(--ink2);margin-top:4px}
+.task-board-refined .task-board-lane>header b{min-width:24px;height:24px;background:#e9eee2;color:var(--forest);font-size:11px}
+.task-board-refined .task-board-lane.upcoming .task-lane-dot{background:#779781}
+.task-board-refined .task-lane-body{flex:1;min-height:0;height:auto;max-height:none;padding:10px;gap:10px;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;scrollbar-gutter:stable;scrollbar-width:thin}
+.task-board-refined .task-board-card{flex:0 0 auto;min-width:0;padding:12px 11px 9px;background:#fff;border:1px solid var(--line);border-radius:9px;box-shadow:0 2px 5px #193c2610;transform:none}
+.task-board-refined .task-board-card:hover{border-color:#bdcdb2;box-shadow:0 3px 10px #193c2614}
+.task-board-refined .task-board-card-top{align-items:start;gap:6px}
+.task-board-refined .task-board-card-top>span{font-size:9px;letter-spacing:.06em;color:#647460;white-space:normal;line-height:1.5}
+.task-board-refined .task-board-card .status{font-size:9px;padding:3px 5px;flex:none}
+.task-board-refined .task-board-card h3{margin:10px 0 6px;font-size:12px;line-height:1.5}
+.task-board-card h3 button{display:block;border:0;background:none;padding:0;font:inherit;font-weight:750;text-align:left;color:var(--forest);width:100%;cursor:pointer;overflow-wrap:anywhere}
+.task-board-card h3 button:hover{text-decoration:underline;text-underline-offset:3px}
+.task-board-refined .task-board-card p{font-size:11px;color:var(--ink2);line-height:1.5;-webkit-line-clamp:2}
+.task-board-refined .task-board-card-client{margin-top:10px;padding-top:9px;border-color:#edf0e6}
+.task-board-refined .task-board-card-client strong{font-size:11px;white-space:normal;line-height:1.4;color:#4e604d}
+.task-board-refined .task-board-card-client small{font-size:10px;color:var(--ink2);white-space:normal}
+.task-board-refined .task-board-card-foot{margin-top:10px}
+.task-board-refined .task-board-assignee{max-width:100%;font-size:11px;color:#576551;gap:7px}
+.task-board-assignee>span:last-child{overflow:hidden;text-overflow:ellipsis}
+.task-board-refined .task-board-assignee .admin-member-avatar{width:25px;height:25px;border-radius:8px;font-size:9px}
+.task-board-refined .task-board-card-actions{justify-content:space-between;align-items:center;gap:8px;margin-top:9px;padding-top:7px;border-color:#edf0e6}
+.task-board-refined .task-board-due{display:inline-flex;align-items:center;gap:5px;font-size:10px;color:#64705e;white-space:normal}
+.task-board-refined .task-board-due svg{width:13px;height:13px}
+.task-board-refined .overdue .task-board-due{color:#a45b20}
+.task-board-refined .task-board-card-actions .client-menu-trigger{width:30px;height:30px;padding:0;border:1px solid var(--line);border-radius:7px;color:var(--forest);background:#fff;font-size:20px;flex:none}
+.task-board-refined .task-board-card-actions button:hover{text-decoration:none;background:var(--lime-soft)}
+.task-board-refined .task-board-card-actions [data-task-manager-action]{font-size:10px;min-height:30px;color:var(--forest);text-align:right}
+.task-board-refined .task-board-card.is-done{opacity:1;background:#fafbf7}
+.task-board-refined .task-board-card.is-done h3 button{color:#65745f;text-decoration:line-through}
+.task-board-refined .task-lane-empty{margin:auto;padding:24px 8px;font-size:11px;color:#78836f;text-align:center}
+.task-board-no-results{display:flex;gap:8px;flex-wrap:wrap;padding:12px 15px;margin-bottom:12px;border:1px dashed #b7c6a8;border-radius:9px;font-size:12px;color:var(--forest);background:#f8faf1}
+.task-board-no-results span{color:var(--ink2)}
+
+/* Reports use one metric source and the same quiet cards as Overview. */
+.reports-page .reports-kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:18px}
+.reports-page .reports-kpis article:nth-child(n){grid-column:auto;min-width:0;border:1px solid var(--line);border-radius:11px;padding:16px;background:#fff;color:var(--ink);box-shadow:var(--shadow)}
+.reports-page .reports-kpis .report-kpi-label{display:flex;gap:8px;align-items:center;min-height:30px}
+.reports-page .report-kpi-label svg{color:var(--forest)}
+.reports-page .reports-kpis article:nth-child(n) small{font-size:10px;letter-spacing:.04em;color:#647354}
+.reports-page .reports-kpis article strong{font-size:28px;line-height:1.2;margin:14px 0 5px;color:var(--forest)}
+.reports-page .reports-kpis article:nth-child(n)>span{font-size:11px;line-height:1.5;color:var(--ink2)}
+.reports-page .reports-grid{gap:16px;margin-bottom:16px}
+.reports-page .reports-grid>.ops-surface{min-width:0}
+.reports-page .reports-bars{padding:7px 18px 13px}
+.reports-page .reports-bar-row,.reports-page .reports-workload-row{grid-template-columns:minmax(100px,1fr) minmax(60px,1.3fr) 30px;gap:12px;min-width:0;margin:0;padding:11px 0}
+.reports-page .reports-bar-row>span,.reports-page .reports-workload-row>span{font-size:12px;color:#4c5948;white-space:normal;overflow-wrap:anywhere;line-height:1.5}
+.reports-page .reports-bar-row strong,.reports-page .reports-workload-row strong{font-size:12px;color:var(--forest)}
+.reports-page .reports-bar-row>i,.reports-page .reports-workload-row>i{height:7px;background:#edf1e6}
+.reports-page .reports-bar-row>i b,.reports-page .reports-workload-row>i b{background:linear-gradient(90deg,#94b668,var(--lime))}
+.reports-page .reports-bar-row>i b.is-blue{background:linear-gradient(90deg,#548773,#a7cfb6)}
+.reports-page .reports-workload{padding:6px 18px 12px;max-height:350px;overflow:auto}
+.reports-page .reports-workload-row{width:100%;border:0;border-bottom:1px solid #f0f2eb;background:transparent;text-align:left;cursor:pointer;border-radius:5px;font:inherit}
+.reports-page .reports-workload-row:hover{background:#f4f8ed}
+.reports-page .reports-workload-row:last-child{border-bottom:0}
+.reports-page .reports-health-list{padding:14px 18px 18px;gap:10px}
+.reports-page .reports-health-list>div{padding:13px;background:#f9faf5;border-color:var(--line);row-gap:4px}
+.reports-page .reports-health-list strong{font-size:22px;color:var(--forest)}
+.reports-page .reports-health-list small{font-size:11px;line-height:1.5;color:var(--ink2)}
+.reports-page .report-window{flex:none}
+.reports-page .reports-footnote,.reports-page .reports-empty{font-size:11px;line-height:1.6;color:var(--ink2)}
+.reports-page .reports-footnote{margin-top:2px}
+
+/* Access stays user-first; every row has one menu. */
+.admin-page .admin-users-surface>.admin-section-head{margin:0}
+.admin-page .admin-user-table{width:100%;min-width:610px}
+.admin-page .admin-user-table th:last-child,.admin-page .admin-user-table td:last-child{width:64px;border-left:0!important;box-shadow:none!important}
+.admin-page .admin-user-table td{padding:14px 18px;vertical-align:middle;font-size:12px}
+.admin-page .admin-user-cell{gap:11px;max-width:400px}
+.admin-page .admin-user-cell>span{min-width:0}
+.admin-page .admin-user-cell strong{font-size:12px;color:var(--ink);white-space:normal}
+.admin-page .admin-user-cell small{font-size:11px;color:var(--ink2);overflow-wrap:anywhere}
+.admin-page .admin-user-status{font-size:10px;padding:5px 9px}
+.admin-page .admin-row-actions .client-menu-trigger{width:32px;height:32px;font-size:20px;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--forest)}
+.admin-page .admin-roles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px;margin-top:18px}
+.admin-page .admin-role-card,.admin-page .admin-role-add-card{padding:18px;min-width:0;border-radius:12px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+.admin-page .admin-role-add-card{background:#f4f7e9;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.admin-page .admin-role-add-card .btn{align-self:flex-start}
+.admin-page .admin-role-add-card h2,.admin-page .admin-role-card h2{font-size:14px;color:var(--forest)}
+.admin-page .admin-role-add-card p,.admin-page .admin-role-card p{font-size:12px;color:var(--ink2);line-height:1.6}
+.admin-page .admin-role-card-head{align-items:start;gap:10px}
+.admin-page .admin-role-card-head>div{min-width:0;flex:1}
+.admin-page .admin-role-icon,.admin-page .admin-role-add-icon{width:34px;height:34px;background:var(--lime-soft);color:var(--forest);border-radius:10px;flex:none}
+.admin-page .admin-kebab{width:30px;height:30px;display:grid;place-items:center;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--forest);padding:5px}
+.admin-page .admin-permission-chips{gap:6px;margin-top:14px}
+.admin-page .admin-permission-chips span{font-size:10px;background:#f0f5e7;color:#536b3d;border:1px solid #e1e9d5;padding:5px 7px}
+.admin-page .admin-role-card-foot{margin-top:16px;padding-top:12px;font-size:11px}
+.admin-page .admin-role-card-foot button{font-size:12px;min-height:30px;color:var(--forest)}
+.admin-page .admin-access-note{margin-top:16px;padding:14px 16px;border-radius:10px;background:#f7f8f0;border:1px solid var(--line);font-size:12px;color:var(--ink2)}
+.admin-page .admin-access-note strong{font-size:12px;color:var(--forest)}
+.admin-page .admin-access-note p{font-size:11px;line-height:1.6;margin:4px 0 0}
+
+/* Compact Overview summary: balanced columns, readable values, stable portraits. */
+.overview-task-focus .overview-section-heading{padding:16px 18px 12px;align-items:center;gap:14px}
+.overview-task-focus .overview-section-heading p{font-size:11px;color:var(--ink2)}
+.overview-task-focus .overview-section-heading h2{font-size:15px}
+.overview-task-focus .overview-section-heading>button{font-size:11px;min-height:32px;color:var(--forest);flex:none}
+.overview-task-focus-body{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:22px;padding:0 18px 16px}
+.overview-task-stats{grid-template-columns:repeat(2,minmax(0,1fr));height:auto;gap:8px}
+.overview-task-stats button{height:76px;padding:10px 12px;background:#f8faf4;border-color:var(--line);border-radius:9px}
+.overview-task-stats small{font-size:9px;color:#5c6b52}
+.overview-task-stats strong{font-size:22px;line-height:1.1;margin:4px 0}
+.overview-task-stats span{font-size:10px;color:var(--ink2);white-space:normal}
+.overview-team-workload-head strong{font-size:12px}
+.overview-team-workload-head span{font-size:10px;color:var(--ink2)}
+.overview-team-workload{max-height:240px;overflow:auto;padding:0}
+.overview-team-person{grid-template-columns:30px minmax(65px,1fr) minmax(35px,.8fr) 24px;height:auto;min-height:39px;gap:8px;padding:4px 5px}
+.overview-team-person .admin-member-avatar{width:30px;height:30px;border-radius:9px}
+.overview-team-person>span:nth-child(2) strong{font-size:11px}
+.overview-team-person>span:nth-child(2) small{font-size:9px;color:var(--ink2)}
+.overview-team-person em{font-size:11px;color:var(--forest)}
+
+/* Dialogs, timeline and canvas share the same control sizes. */
+.modal{max-height:min(92dvh,920px)}
+.modal-header,.modal-footer{flex-shrink:0;gap:12px}
+.modal-header .icon-button{width:32px;height:32px;flex:none;border-radius:7px}
+.modal-body{min-height:0;overscroll-behavior:contain;scrollbar-gutter:stable}
+.modal-footer{flex-wrap:wrap}
+.modal .field :is(input,select,textarea){font-size:12px;max-width:100%;min-width:0}
+.modal .field label{font-size:11px}
+.modal .form-grid>*{min-width:0}
+.modal .form-error{font-size:12px}
+.admin-permission-form label{min-height:38px;font-size:12px}
+.client-timeline-entry{grid-template-columns:32px minmax(0,1fr) auto;gap:12px;padding:15px 0}
+.client-timeline-icon{display:grid;place-items:center;width:30px;height:30px;background:var(--lime-soft);color:var(--forest);border-radius:9px}
+.client-timeline-icon svg{width:16px;height:16px}
+.client-timeline-entry small{font-size:9px;color:#617849}
+.client-timeline-entry strong{font-size:12px;color:var(--ink);overflow-wrap:anywhere}
+.client-timeline-entry p{font-size:11px;line-height:1.6;color:var(--ink2);overflow-wrap:anywhere}
+.client-timeline-entry time{font-size:10px;color:var(--ink2)}
+.canvas-assign-task{display:flex;align-items:center;gap:5px;border:1px solid #d4dfc7;background:var(--lime-soft);color:var(--forest);border-radius:6px;padding:6px 8px;min-height:30px;margin-top:10px;font:inherit;font-size:11px;cursor:pointer}
+.canvas-assign-task svg{width:13px;height:13px}
+.canvas-node-actions button svg{width:13px;height:13px}
+.canvas-node-head{flex-wrap:wrap}
+.canvas-node-stage{max-width:100%;overflow:hidden;text-overflow:ellipsis}
+[role="region"][tabindex]:focus-visible{outline:2px solid var(--success);outline-offset:2px}
+button:disabled{cursor:not-allowed;opacity:.5}
+
+@media(max-width:1200px){
+ .reports-page .reports-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .reports-page .reports-grid{grid-template-columns:1fr}
+ .task-board-refined .task-board-grid{grid-template-columns:repeat(5,220px)}
+}
+@media(max-width:850px){
+ .task-board-page.task-board-refined,.reports-page.ops-page,.admin-page.ops-page{padding:18px 16px 24px}
+ .overview-task-focus-body{grid-template-columns:1fr;gap:16px}
+ .overview-task-stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .task-board-refined .task-board-grid{height:max(360px,calc(100dvh - 350px))}
+}
+@media(max-width:600px){
+ .task-board-refined .task-board-header,.reports-page .ops-heading,.admin-page .admin-heading{align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+ .task-board-refined .task-board-header h1,.reports-page .ops-heading h1,.admin-page .admin-heading h1{font-size:24px}
+ .task-board-refined .task-team-view-heading{align-items:flex-start;flex-wrap:wrap;gap:5px}
+ .task-board-refined .task-team-card{min-width:140px}
+ .task-board-refined .task-board-grid{grid-template-columns:repeat(5,245px);height:430px;min-height:0}
+ .task-board-toolbar select{flex:1;min-width:0}
+ .task-board-search{flex-basis:100%}
+ .reports-page .reports-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .reports-page .reports-kpis article:nth-child(n){padding:13px}
+ .reports-page .reports-kpis article strong{font-size:25px}
+ .reports-page .ops-section-head,.admin-page .admin-section-head{align-items:flex-start;flex-wrap:wrap}
+ .reports-page .reports-actions{margin:0}
+ .reports-page .reports-bar-row,.reports-page .reports-workload-row{grid-template-columns:minmax(85px,1fr) minmax(35px,1fr) 25px;gap:8px}
+ .reports-page .reports-health-list{grid-template-columns:1fr 1fr}
+ .admin-page .admin-roles-grid{grid-template-columns:1fr}
+ .overview-task-focus .overview-section-heading{align-items:flex-start;flex-wrap:wrap}
+ .overview-task-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .client-timeline-entry{grid-template-columns:30px minmax(0,1fr)}
+ .client-timeline-entry time{grid-column:2}
+ .modal-header,.modal-footer{padding:16px}
+ .modal-body{padding:18px 16px}
+ .modal .form-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ .task-board-refined *,.reports-page *,.admin-page *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
+

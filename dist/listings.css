@@ -1,0 +1,116 @@
+/* All record tables share a bounded scroll area inside their card. */
+.card:has(>.table-wrap),.ops-surface,.core-panel,.ops-page,.core-workspace{min-width:0;max-width:100%}
+.table-wrap,.ops-table-wrap,.core-table-wrap{position:relative;isolation:isolate;min-width:0;width:100%;max-width:100%;overflow:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#b7c8ae #f4f5ef}
+.card>.table-wrap,.card>.toolbar+.table-wrap,.card-head+.table-wrap,.client-list-card>.table-wrap{width:100%;max-width:100%;margin:0;border:0;border-top:1px solid var(--line);border-radius:0}
+.card>.table-wrap:last-child{border-radius:0 0 10px 10px}
+.table-wrap:focus-visible,.ops-table-wrap:focus-visible,.core-table-wrap:focus-visible{outline:2px solid #609850;outline-offset:-2px}
+.data-table,.ops-table,.core-table{width:100%;border-collapse:separate;border-spacing:0;white-space:normal}
+.data-table{min-width:640px}
+/* Shared table rule: horizontal row separators only, never vertical column dividers. */
+.data-table th,.data-table td,.ops-table th,.ops-table td,.core-table th,.core-table td{padding:14px 16px;text-align:left;vertical-align:middle;border-left:0;border-right:0}
+.data-table th,.ops-table th,.core-table th{height:46px;white-space:nowrap}
+.data-table td,.ops-table td,.core-table td{white-space:normal;overflow-wrap:anywhere;line-height:1.5}
+.data-table .sub-cell,.core-table td small{white-space:normal;overflow-wrap:anywhere}
+.data-table .row-action,.product-client-link{max-width:100%;white-space:normal;text-align:left;line-height:1.5}
+.data-table .status,.ops-table .status,.core-table .status{white-space:nowrap}
+.data-table .empty-state{white-space:normal;padding:30px 20px}
+
+/* Keep actions reachable while wide tables scroll within the workspace. */
+.has-row-actions>thead>tr>th:last-child,.has-row-actions>tbody>tr>td:last-child:not([colspan]){position:sticky;right:0;z-index:1;width:64px;min-width:64px;text-align:right;box-shadow:none;border-left:0;border-right:0;background:#fff}
+.has-row-actions>thead>tr>th:last-child{z-index:2;background:#252a36}
+.has-row-actions>tbody>tr:nth-child(even)>td:last-child:not([colspan]){background:#fcfcf9}
+.has-row-actions>tbody>tr:hover>td:last-child:not([colspan]){background:#f4f5ef}
+.has-row-actions .client-menu-trigger{width:32px;height:32px;flex:none;vertical-align:middle}
+.client-row-menu{max-width:calc(100vw - 16px);max-height:calc(100dvh - 16px);overflow-y:auto}
+.client-row-menu button{overflow-wrap:anywhere}
+
+/* Client and deployment columns remain readable without stretching the page. */
+.client-list-card .data-table{min-width:920px;table-layout:fixed}
+.client-list-card .data-table th:nth-child(1){width:24%}
+.client-list-card .data-table th:nth-child(2){width:15%}
+.client-list-card .data-table th:nth-child(3),.client-list-card .data-table th:nth-child(4){width:7%}
+.client-list-card .data-table th:nth-child(5){width:calc(47% - 194px)}
+.client-list-card .data-table th:nth-child(6){width:130px}
+.client-list-card .data-table th:last-child,.client-list-card .data-table td:last-child{width:64px;min-width:64px;padding:12px 16px}
+.record-identity{display:flex;align-items:center;gap:10px;min-width:0}
+.record-identity .client-logo{margin:0;flex:0 0 35px}
+.record-identity .strong-cell{min-width:0;overflow-wrap:anywhere}
+.data-table.deployment-list-table{min-width:960px;table-layout:fixed}
+.deployment-list-table th:nth-child(1){width:21%}
+.deployment-list-table th:nth-child(2){width:15%}
+.deployment-list-table th:nth-child(3){width:21%}
+.deployment-list-table th:nth-child(4){width:calc(43% - 204px)}
+.deployment-list-table th:nth-child(5){width:140px}
+.deployment-list-table.has-row-actions th:last-child,.deployment-list-table td.product-actions-cell{width:64px;min-width:64px;padding:12px 16px}
+.product-detail-clients .deployment-list-table td:nth-child(4){min-width:0}
+.deployment-module-list{max-width:100%}
+.deployment-module-list span{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+.deployment-module-list b{flex:none}
+.commercial-amount{display:block;white-space:normal;overflow-wrap:anywhere;line-height:1.5}
+.contacts-page .ops-table{min-width:800px}
+.contacts-page .ops-table th:nth-child(1){width:28%}
+.contacts-page .ops-table th:nth-child(2){width:27%}
+.contacts-page .ops-table th:nth-child(3){width:calc(45% - 184px)}
+.contacts-page .ops-table th:nth-child(4){width:120px}
+.contacts-page .ops-table th:last-child,.contacts-page .ops-table td:last-child{width:64px;min-width:64px;padding:12px 16px}
+.contacts-page .ops-person{min-width:0}.contacts-page .ops-person>div{min-width:0}
+.contacts-page .ops-person strong,.contacts-page .ops-person small{white-space:normal;overflow-wrap:anywhere}
+.contacts-page .ops-person-avatar{flex-shrink:0}
+.billing-workspace .core-table{min-width:930px;table-layout:fixed}
+.billing-workspace .core-table th:nth-child(1){width:110px}
+.billing-workspace .core-table th:nth-child(2){width:26%}
+.billing-workspace .core-table th:nth-child(3){width:calc(74% - 529px)}
+.billing-workspace .core-table th:nth-child(4){width:140px}
+.billing-workspace .core-table th:nth-child(5){width:105px}
+.billing-workspace .core-table th:nth-child(6){width:110px}
+.billing-workspace .core-table th:last-child{width:64px;min-width:64px}
+.prospect-list-card .data-table{table-layout:auto;min-width:1050px}
+.prospect-list-card .data-table td{white-space:normal;max-width:280px}
+.prospect-list-card .data-table th:last-child,.prospect-list-card .data-table td:last-child{width:64px;min-width:64px}
+
+/* Product cards share consistent spacing, even with longer names or prices. */
+.product-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));align-items:stretch}
+.product-card{min-width:0;padding:22px;gap:0}
+.product-card h3{min-height:2.8em;line-height:1.4;overflow-wrap:anywhere}
+.product-card p,.product-card-commercial{overflow-wrap:anywhere}
+.product-footer{gap:12px;flex-wrap:wrap;padding-top:20px}
+.product-footer>span{flex:none}.product-footer>button{margin-left:auto;max-width:100%;text-align:right;line-height:1.5}
+.product-grid>.empty-state{grid-column:1/-1}
+.product-list-header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 22px}
+.product-list-header>.card-head{display:contents}
+.product-list-header>.card-head>div{flex:1;min-width:0}
+.product-list-header .count-pill{order:3;flex:none}
+.product-list-header .product-module-filter{flex:none;padding:0;gap:9px}
+.product-list-header .product-module-filter label{font-size:11px}
+.product-list-header .product-module-filter select{min-width:180px;max-width:220px}
+
+/* Toolbars and pagination wrap without forcing their parent wider. */
+.toolbar,.client-list-toolbar,.ops-toolbar,.core-filter-row,.prospect-filters{min-width:0;max-width:100%;flex-wrap:wrap}
+.toolbar input,.toolbar select,.client-list-toolbar input,.client-list-toolbar select,.ops-toolbar input,.ops-toolbar select,.core-filter-row input,.core-filter-row select{min-width:0;max-width:100%}
+.toolbar input,.client-list-toolbar input,.ops-toolbar input{flex:1 1 240px}
+.client-pagination,.ops-pagination,.core-pager{gap:12px;flex-wrap:wrap;min-width:0}
+.client-pagination>div,.core-pager>div{flex-wrap:wrap;max-width:100%}
+.card-head,.core-panel-heading,.page-header,.core-heading,.ops-heading{gap:12px;flex-wrap:wrap}
+.card-head>div,.core-panel-heading>div,.page-header>div,.core-heading>div,.ops-heading>div{min-width:0}
+.card-head h2,.card-head p,.core-panel-heading h2,.core-panel-heading p{overflow-wrap:anywhere}
+.template-list>div>div,.ops-task>div{min-width:0;overflow-wrap:anywhere}
+.template-list>div>button,.template-icon,.ops-task-check{flex-shrink:0}
+.hd-workspace .case-row{min-width:0;max-width:100%}
+.hd-workspace .case-row-top{min-width:0;flex-wrap:wrap;gap:5px 12px}
+.hd-workspace .case-row-top strong{white-space:normal;overflow-wrap:anywhere}
+@media(max-width:650px){
+ .data-table th,.data-table td,.ops-table th,.ops-table td,.core-table th,.core-table td{padding:12px}
+ .toolbar,.client-list-toolbar,.ops-toolbar{padding:14px}
+ .toolbar input,.client-list-toolbar input,.ops-toolbar input{flex-basis:100%}
+ .client-pagination,.ops-pagination,.core-pager{padding:14px}
+ .product-card{padding:20px}
+ .product-list-header{flex-wrap:wrap;padding:16px;gap:12px}
+ .product-list-header>.card-head>div{flex-basis:calc(100% - 80px)}
+ .product-list-header .count-pill{order:0}
+ .product-list-header .product-module-filter{width:100%;flex-direction:row;align-items:center}
+ .product-list-header .product-module-filter select{min-width:0;max-width:none;flex:1}
+ .hd-workspace .case-row-main{flex:1 1 100%}
+ .hd-workspace .case-row-meta{width:100%;grid-template-columns:auto auto;justify-content:start;justify-items:start;gap:8px 14px}
+ .hd-workspace .case-row-meta>small{grid-column:1/-1}
+ .ops-task{flex-wrap:wrap}.ops-task>div{flex:1 1 65%}
+}

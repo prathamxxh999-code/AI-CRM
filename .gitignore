@@ -1,0 +1,15 @@
+# Local dependencies, runtime files and private configuration
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.log
+.sites-runtime/
+.wrangler/
+outputs/

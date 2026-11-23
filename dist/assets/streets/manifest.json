@@ -1,0 +1,106 @@
+{
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "attribution": "https://www.openstreetmap.org/copyright",
+  "cities": {
+    "pune": {
+      "center": [
+        73.8567,
+        18.5204
+      ],
+      "file": "pune.json",
+      "date": "2026-07-28T02:16:18Z",
+      "features": 40776,
+      "buildingFeatures": 35631,
+      "buildingBounds": [
+        18.482,
+        73.813,
+        18.555,
+        73.899
+      ],
+      "buildingDataDate": "2026-10-19T10:10:02Z",
+      "version": "buildings-20261019-7"
+    },
+    "mumbai": {
+      "center": [
+        72.8777,
+        19.076
+      ],
+      "file": "mumbai.json",
+      "date": "2026-10-17T06:23:05Z",
+      "features": 2239
+    },
+    "nashik": {
+      "center": [
+        73.7898,
+        19.9975
+      ],
+      "file": "nashik.json",
+      "date": "2026-07-15T15:22:01Z",
+      "features": 1870
+    },
+    "nagpur": {
+      "center": [
+        79.0882,
+        21.1458
+      ],
+      "file": "nagpur.json",
+      "date": "2026-10-17T06:17:59Z",
+      "features": 2088
+    },
+    "kolhapur": {
+      "center": [
+        74.2433,
+        16.705
+      ],
+      "file": "kolhapur.json",
+      "date": "2026-07-15T15:22:01Z",
+      "features": 7157
+    },
+    "thane": {
+      "center": [
+        72.9781,
+        19.2183
+      ],
+      "file": "thane.json",
+      "date": "2026-10-17T06:24:04Z",
+      "features": 2609
+    },
+    "bengaluru": {
+      "center": [
+        77.5946,
+        12.9716
+      ],
+      "file": "bengaluru.json",
+      "date": "2026-10-17T06:25:03Z",
+      "features": 2753
+    },
+    "hyderabad": {
+      "center": [
+        78.4867,
+        17.385
+      ],
+      "file": "hyderabad.json",
+      "date": "2026-07-28T02:16:18Z",
+      "features": 11468
+    },
+    "ahmedabad": {
+      "center": [
+        72.5714,
+        23.0225
+      ],
+      "file": "ahmedabad.json",
+      "date": "2026-10-17T06:25:03Z",
+      "features": 2068
+    },
+    "jaipur": {
+      "center": [
+        75.7873,
+        26.9124
+      ],
+      "file": "jaipur.json",
+      "date": "2026-10-17T06:26:03Z",
+      "features": 2576
+    }
+  }
+}

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F1EFE7">
+  <meta name="description" content="IDSSPL CRM workspace">
+  <title>IDSSPL CRM · Workspace</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="workflow-canvas.css">
+  <link rel="stylesheet" href="workflow-import.css">
+  <link rel="stylesheet" href="crm-ops.css">
+  <link rel="stylesheet" href="login.css?v=20261016-waves-clean6">
+  <link rel="stylesheet" href="assets/maplibre-gl.css">
+  <link rel="stylesheet" href="theme.css?v=20261017-clean-pin2">
+  <link rel="stylesheet" href="network-map.css?v=20261019-saved-pins4">
+  <link rel="stylesheet" href="helpdesk.css?v=20261024-tabs1">
+  <link rel="stylesheet" href="issue-tracker.css?v=20261024-issues1">
+  <link rel="stylesheet" href="sidebar.css?v=20261017-sidebar2">
+  <link rel="stylesheet" href="listings.css?v=20261017-table-actions4">
+  <link rel="stylesheet" href="product-catalog.css?v=20261017-catalog1">
+  <link rel="stylesheet" href="reminder-notes.css?v=20261017-history2">
+  <link rel="stylesheet" href="workspace-ui.css?v=20261029-ui-review1">
+  <link rel="stylesheet" href="roles-access.css?v=20261029-access2">
+  <script defer src="login.js?v=20261015-native-fit2"></script>
+  <script defer src="assets/india-maps.js?v=20261015-all"></script>
+  <script defer src="crud-model.js?v=20261017-helpdesk1"></script>
+  <script defer src="helpdesk-model.js?v=20261017-helpdesk1"></script>
+  <script defer src="product-catalog-model.js?v=20261017-catalog1"></script>
+  <script defer src="reminder-notes-model.js?v=20261017-history1"></script>
+  <script defer src="app.js?v=20261029-ui-review1"></script>
+  <script defer src="client-map.js?v=20261019-demo-offices5"></script>
+  <script defer src="street-map.js?v=20261019-buildings7"></script>
+  <script defer src="workflow-canvas.js?v=20261029-ui-review1"></script>
+  <script defer src="workflow-import.js"></script>
+  <script defer src="crm-ops.js?v=20261029-access2"></script>
+  <script defer src="core-workspaces.js?v=20261017-table-actions4"></script>
+  <script defer src="prospect-hub.js?v=20261017-crud2"></script>
+  <script defer src="vendor/fflate.js"></script>
+  <script defer src="bulk-onboarding.js?v=20261016-bulk1"></script>
+  <script defer src="helpdesk.js?v=20261024-tab-order2"></script>
+  <script defer src="issue-tracker.js?v=20261024-issues1"></script>
+  <script defer src="sidebar.js?v=20261017-sidebar1"></script>
+  <script defer src="product-catalog.js?v=20261017-catalog1"></script>
+  <script defer src="reminder-notes.js?v=20261019-overview-start1"></script>
+</head>
+<body>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-task" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M8 12l3 3 5-6"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 3v17h17M8 16v-5m5 5V7m5 9V4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 1 7M3 4v6h6M12 7v5l3 2"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="m15 4 5 5M4 20l1-5L16 4a2 2 0 0 1 4 4L9 19l-5 1ZM4 22h16"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2H3Zm13-15a3 3 0 0 1 0 6m2 3a5 5 0 0 1 3 5v1h-4"/></symbol>
+    <symbol id="i-branch" viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="12" rx="2"/><path d="M2 9 12 3l10 6M8 21v-7h8v7"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m3 7 9-4 9 4-9 4-9-4Zm0 0v10l9 4 9-4V7M12 11v10"/></symbol>
+    <symbol id="i-bill" viewBox="0 0 24 24"><path d="M5 3h14v18l-3-2-4 2-4-2-3 2V3Zm4 5h6M9 12h6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0-9-9v7l3-1.5A9 9 0 0 0 12 21Z"/><path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-.9.8-1.7 1.2-1.7 2.7M12 17h.01"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 1.8 7.2L21 11l-7.2 1.8L12 20l-1.8-7.2L3 11l7.2-1.8L12 2Zm7 15 .7 2.3L22 20l-2.3.7L19 23l-.7-2.3L16 20l2.3-.7L19 17Z"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m12 2 2 2.2 3-.2.8 2.9 2.7 1.3-1 2.9 1 2.9-2.7 1.3-.8 2.9-3-.2L12 20l-2-2.2-3 .2-.8-2.9-2.7-1.3 1-2.9-1-2.9 2.7-1.3L7 4l3 .2L12 2Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 8-3 9h18c0-1-3-2-3-9ZM10 21h4"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10m-7 6h4"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m3 11 18-8-7 18-3-8-8-2Zm8 2 10-10"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M4 20h16"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-nav-clients" viewBox="0 0 24 24"><path d="M4 21V5l8-3v19M12 8l8 3v10M2 21h20M7.5 7v1M7.5 11v1M7.5 15v1M16 13v1M16 17v1"/></symbol>
+    <symbol id="i-nav-prospects" viewBox="0 0 24 24"><circle cx="10" cy="14" r="7"/><circle cx="10" cy="14" r="3"/><path d="m10 14 10-10M15 4h5v5"/></symbol>
+    <symbol id="i-nav-contacts" viewBox="0 0 24 24"><rect x="5" y="3" width="15" height="18" rx="3"/><path d="M3 7h4M3 12h4M3 17h4M9 17a3.5 3.5 0 0 1 7 0"/><circle cx="12.5" cy="9" r="2.5"/></symbol>
+    <symbol id="i-nav-support" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="m5.6 5.6 3.6 3.6m5.6 5.6 3.6 3.6m0-12.8-3.6 3.6m-5.6 5.6-3.6 3.6"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><path d="M4 4h16v11l-5 5H4V4Z M15 20v-5h5M8 9h8M8 13h4"/></symbol>
+    <symbol id="i-nav-collapse" viewBox="0 0 24 24"><path d="m14 7-5 5 5 5"/></symbol>
+  </svg>
+
+  <section class="login-screen" id="login-screen" aria-label="Sign in to IDSSPL CRM">
+    <div class="login-visual-stage" aria-hidden="true">
+      <video id="login-showcase-video" class="login-visual-video" autoplay muted loop playsinline preload="metadata" poster="assets/login-waves-poster.jpg" disablepictureinpicture>
+        <source src="assets/login-waves.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="login-layout">
+      <div class="login-showcase">
+        <div class="login-showcase-top">
+          <div class="login-brand" aria-label="IDSSPL CRM">
+            <span class="login-brand-symbol" aria-hidden="true"><span></span></span>
+            <span>IDSSPL <b>CRM</b><small>THE INTELLIGENT WORKSPACE</small></span>
+          </div>
+          <span class="login-edition">PRIVATE PREVIEW <span aria-hidden="true">↗</span></span>
+        </div>
+        <div class="login-showcase-bottom">
+          <div class="login-orbit-label"><span class="login-orbit-pulse"></span> ONE CONNECTED WORKSPACE</div>
+          <h1>Every relationship.<br><em>In its best light.</em></h1>
+          <p>Clients, opportunities, delivery and conversations — thoughtfully connected in one place.</p>
+        </div>
+      </div>
+      <div class="login-entry">
+        <div class="login-entry-top"><span class="login-entry-monogram">ID</span><span>Welcome to your workspace</span></div>
+        <div class="login-form-wrap">
+          <div class="login-intro"><span class="login-eyebrow"><span></span> WORKSPACE ACCESS</span><h2>Welcome back<span class="login-period">.</span></h2><p>Sign in to continue where your team left off.</p></div>
+          <form id="login-form" novalidate>
+            <label class="login-field" for="login-email"><span>Email address</span><input id="login-email" type="email" name="email" autocomplete="username" inputmode="email" placeholder="you@company.com" required></label>
+            <label class="login-field" for="login-password"><span>Password</span><span class="login-password-control"><input id="login-password" type="password" name="password" autocomplete="current-password" placeholder="Enter your password" required><button id="login-password-toggle" type="button" aria-label="Show password" aria-pressed="false">Show</button></span></label>
+            <p class="login-error" id="login-error" role="alert" aria-live="polite" hidden></p>
+            <button class="login-submit" id="login-submit" type="submit"><span class="login-submit-label">Enter workspace</span><span class="login-submit-icon" aria-hidden="true">↗</span></button>
+          </form>
+          <div class="login-demo" aria-label="Demo credentials">
+            <div class="login-demo-heading"><span class="login-demo-sparkle" aria-hidden="true">✦</span><div><strong>Explore with a demo account</strong><small>Use these credentials to enter the preview.</small></div></div>
+            <div class="login-demo-credentials"><div><span>Email</span><code id="demo-email">demo@idsspl.com</code><button type="button" data-copy="email" aria-label="Copy demo email" title="Copy email">Copy</button></div><div><span>Password</span><code id="demo-password">Welcome@123</code><button type="button" data-copy="password" aria-label="Copy demo password" title="Copy password">Copy</button></div></div>
+            <button id="login-fill-demo" type="button" class="login-fill">Fill demo details <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Workspace navigation">
+      <div class="sidebar-header">
+        <a href="#" class="brand" data-view="overview" aria-label="IDSSPL CRM overview" title="IDSSPL CRM overview">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-text">IDSSPL<span> CRM</span><small>THE CLIENT WORKSPACE</small></span>
+        </a>
+        <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-label="Collapse sidebar" aria-expanded="true" aria-controls="sidebar-navigation" title="Collapse sidebar"><svg class="sidebar-collapse-icon" aria-hidden="true"><use href="#i-nav-collapse"/></svg><svg class="sidebar-close-icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+      <div class="sidebar-scroll" id="sidebar-navigation">
+        <div class="sidebar-caption"><span>Workspace</span></div>
+        <nav class="nav" aria-label="Main navigation">
+          <button type="button" data-view="overview" class="nav-item active" aria-label="Overview" aria-current="page" title="Overview"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-grid"/></svg></span><span class="sidebar-nav-label">Overview</span></button>
+          <button type="button" data-view="clients" class="nav-item" aria-label="Clients" title="Clients"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-nav-clients"/></svg></span><span class="sidebar-nav-label">Clients</span><em class="sidebar-count" id="nav-clients">0</em></button>
+          <button type="button" data-view="prospects" class="nav-item" aria-label="Prospects" title="Prospects"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-nav-prospects"/></svg></span><span class="sidebar-nav-label">Prospects</span></button>
+          <button type="button" data-view="contacts" class="nav-item" aria-label="Contacts" title="Contacts"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-nav-contacts"/></svg></span><span class="sidebar-nav-label">Contacts</span></button>
+          <button type="button" data-view="products" class="nav-item" aria-label="Products" title="Products"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-box"/></svg></span><span class="sidebar-nav-label">Products</span></button>
+          <button type="button" data-view="billing" class="nav-item" aria-label="Billing" title="Billing"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-bill"/></svg></span><span class="sidebar-nav-label">Billing</span></button>
+          <button type="button" data-view="reminders" class="nav-item" aria-label="Reminder board" title="Reminder board"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-note"/></svg></span><span class="sidebar-nav-label">Reminder board</span></button>
+          <button type="button" data-view="tasks" class="nav-item" aria-label="Task manager" title="Task manager"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-task"/></svg></span><span class="sidebar-nav-label">Task manager</span></button>
+          <button type="button" data-view="insights" class="nav-item" aria-label="Reports" title="Reports"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-chart"/></svg></span><span class="sidebar-nav-label">Reports</span></button>
+        </nav>
+        <div class="sidebar-caption second-caption"><span>Communication</span></div>
+        <nav class="nav" aria-label="Communication navigation">
+          <button type="button" data-view="inbox" class="nav-item" aria-label="Client inbox" title="Client inbox"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><span class="sidebar-nav-label">Client inbox</span><em class="sidebar-count sidebar-unread" id="nav-unread" hidden></em></button>
+          <button type="button" data-view="helpdesk" class="nav-item" aria-label="Helpdesk" title="Helpdesk"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-nav-support"/></svg></span><span class="sidebar-nav-label">Helpdesk</span></button>
+          <button type="button" data-view="assistant" class="nav-item" aria-label="AI assistant" title="AI assistant"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-spark"/></svg></span><span class="sidebar-nav-label">AI assistant</span></button>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="sidebar-caption admin-sidebar-caption"><span>Access control</span></div>
+        <button type="button" data-view="roles" class="nav-item settings-link" aria-label="Roles and access" title="Roles and access"><span class="sidebar-nav-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><span class="sidebar-nav-label">Roles &amp; access</span></button>
+      </div>
+    </aside>
+    <button class="sidebar-backdrop" id="sidebar-backdrop" type="button" tabindex="-1" aria-label="Close navigation"></button>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="topbar-left"><button id="mobile-menu" class="icon-button mobile-menu" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button><span class="breadcrumb-stack"><span id="breadcrumb">Workspace</span><svg class="crumb-chevron"><use href="#i-chevron"/></svg><strong id="current-view-name">Overview</strong></span><div class="search-wrap"><svg><use href="#i-search"/></svg><input id="global-search" type="search" placeholder="Search clients, prospects, contacts..." aria-label="Search workspace"><kbd>⌘ K</kbd></div></div>
+        <div class="topbar-actions"><button class="icon-button" id="alerts-button" aria-label="Show alerts"><svg><use href="#i-bell"/></svg><i></i></button><div class="account-wrap"><button class="account-trigger" id="account-menu-button" aria-label="Open account menu" aria-expanded="false" aria-controls="account-menu"><span class="avatar">MA</span><span class="account-name">Mahesh<small>Administrator</small></span><svg class="account-chevron"><use href="#i-chevron"/></svg></button><div class="account-menu" id="account-menu" hidden><span class="account-menu-caption">SIGNED IN AS</span><strong>Mahesh</strong><small>mahesh@idsspl.com</small><button type="button" id="sign-out-button">Sign out <span aria-hidden="true">↗</span></button></div></div></div>
+      </header>
+      <main id="main-content" tabindex="-1"></main>
+    </div>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" role="status" aria-live="polite"></div>
+</body>
+</html>

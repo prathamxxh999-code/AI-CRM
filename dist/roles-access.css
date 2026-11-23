@@ -1,0 +1,200 @@
+/* Roles & access: a user directory and a focused permission workspace. */
+#main-content:has(>.access-page){padding:0;overflow:visible}
+.access-page{padding:22px 24px 30px;min-width:0;color:var(--ink)}
+.access-page :is(button,input,select){font-family:inherit}
+.access-page svg,.access-modal svg{width:17px;height:17px;flex:none}
+.access-page-head{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}
+.access-kicker{display:block;margin-bottom:7px;font-size:10px;font-weight:750;letter-spacing:.13em;color:#69803d}
+.access-page-head h1{margin:0;font-family:Manrope,'DM Sans',sans-serif;font-size:28px;line-height:1.25;letter-spacing:-1px}
+.access-page-head p{margin:7px 0 0;font-size:12px;color:var(--ink2);line-height:1.6}
+.access-page-actions{display:flex;gap:9px;flex:none}
+.access-page .btn,.access-modal .btn{min-height:38px;font-size:12px;padding:8px 13px;border-radius:8px}
+.access-navigation{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+.access-navigation nav{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:10px;background:#f9faf5;max-width:100%;overflow:auto;scrollbar-width:thin}
+.access-navigation nav button{display:flex;align-items:center;gap:7px;min-height:36px;border:0;border-radius:7px;padding:7px 12px;color:#58644e;background:transparent;white-space:nowrap;font-size:12px;font-weight:700;cursor:pointer}
+.access-navigation nav button>span{display:grid;place-items:center;min-width:21px;height:21px;padding:0 5px;border-radius:6px;background:#e9eddf;color:#596b41;font-size:10px}
+.access-navigation nav button.is-selected{background:var(--forest);color:#fff}
+.access-navigation nav button.is-selected>span{background:var(--lime);color:var(--forest-deep)}
+.access-team-summary{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--ink2)}
+.access-team-summary>i{width:6px;height:6px;border-radius:50%;background:var(--success)}
+.access-team-summary>span{color:#b2b6a9}
+.access-panel{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}
+.access-toolbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:14px 16px}
+.access-search{display:flex;align-items:center;gap:8px;flex:1 1 220px;min-width:0;max-width:430px;min-height:38px;padding:0 11px;border:1px solid var(--line);border-radius:8px;color:#7c8772;background:#fafbf8}
+.access-search:focus-within{outline:2px solid var(--success);outline-offset:2px}
+.access-search input{min-width:0;width:100%;border:0;outline:none!important;background:none;font-size:12px;color:var(--ink)}
+.access-toolbar select{min-height:38px;max-width:210px;border:1px solid var(--line);border-radius:8px;background:#fff;padding:7px 30px 7px 10px;color:#46543c;font-size:12px}
+.access-text-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:32px;border:0;background:none;color:var(--forest);font-size:12px;font-weight:650;padding:5px 3px;cursor:pointer}
+.access-text-button:hover{text-decoration:underline;text-underline-offset:3px}
+.access-text-button.is-danger{color:#ad4b3b}
+.access-table-wrap{width:100%;min-width:0;overflow:auto;scrollbar-width:thin;scrollbar-color:#b4c5aa #f3f5ee}
+.access-table-wrap:focus-visible{outline:2px solid var(--success);outline-offset:-2px}
+.access-page .access-user-table{width:100%;min-width:800px;border-spacing:0}
+.access-page .access-user-table th{height:42px;padding:11px 17px;border:0;background:#252a36;color:#f4f6ee;font-size:10px;font-weight:650;letter-spacing:.04em;text-transform:uppercase}
+.access-page .access-user-table td{padding:15px 17px;border-left:0!important;border-right:0!important;border-bottom:1px solid #eeefe7;background:#fff;vertical-align:middle;font-size:12px}
+.access-page .access-user-table tbody tr:hover td{background:#fafcf6}
+.access-page .access-user-table tr:last-child td{border-bottom:0}
+.access-page .access-user-table :is(th,td):last-child{width:56px;text-align:right;box-shadow:none!important}
+.access-page .access-user-table td:first-child{width:30%}
+.access-person{display:flex;align-items:center;gap:11px;min-width:0}
+.access-person>.admin-member-avatar{width:38px;height:38px;border-radius:11px;flex:none}
+.access-person>div{min-width:0;line-height:1.5}
+.access-name{display:inline;border:0;padding:0;background:none;font-size:12px;line-height:1.5;font-weight:750;color:var(--forest);text-align:left;cursor:pointer;overflow-wrap:anywhere}
+.access-name:hover{text-decoration:underline;text-underline-offset:3px}
+.access-person small{display:block;margin-top:3px;font-size:11px;color:var(--ink2);overflow-wrap:anywhere}
+.access-you{display:inline-block;margin-left:6px;font-size:9px;padding:1px 5px;background:#eef4e2;border-radius:4px;color:#68813e;vertical-align:middle}
+.access-role-pill{display:inline-block;border:1px solid #dce7ce;border-radius:6px;padding:5px 8px;max-width:200px;background:#f2f7e8;color:#4c6537;font-size:11px;text-align:left;cursor:pointer;overflow-wrap:anywhere}
+.access-role-pill:hover{background:var(--lime-soft);border-color:#9eba7d}
+.access-module-total{font-size:11px;font-weight:650;color:#425737}
+.access-subtle{display:block;margin-top:3px;font-size:10px;color:var(--ink2)}
+.access-missing{font-size:11px;color:#a76b27}
+.access-work-count{border:0;background:#f2f5ec;padding:5px 8px;border-radius:6px;color:var(--forest);font-size:12px;font-weight:750;cursor:pointer;white-space:nowrap}
+.access-work-count span{font-size:10px;font-weight:500;color:#77836b}
+.access-work-count:hover{background:var(--lime-soft)}
+.access-state{display:inline-flex;align-items:center;gap:6px;padding:5px 8px;border-radius:6px;font-size:10px;font-weight:650;white-space:nowrap;background:#edf5e5;color:#50743b}
+.access-state i{width:5px;height:5px;border-radius:50%;background:#78a65a}
+.access-state.is-inactive{background:#f1f0ec;color:#7c7d72}
+.access-state.is-inactive i{background:#a5a69a}
+.access-page .client-menu-trigger{display:inline-grid;place-items:center;width:32px;height:32px;background:#fff;border:1px solid var(--line);border-radius:7px;color:var(--forest);font-size:20px;cursor:pointer}
+.access-page .client-menu-trigger:hover{background:var(--lime-soft)}
+.access-list-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px;border-top:1px solid var(--line);font-size:11px;color:var(--ink2)}
+.access-list-footer>div{display:flex;align-items:center;gap:12px}
+.access-list-footer .btn{min-height:30px;padding:5px 9px;font-size:11px}
+.access-empty{display:flex;flex-direction:column;align-items:center;text-align:center;padding:44px 22px;gap:7px}
+.access-empty>svg{width:25px;height:25px;color:#8aa667;margin-bottom:5px}
+.access-empty h2{margin:0;font-size:16px;color:var(--forest)}
+.access-empty p{font-size:12px;color:var(--ink2);margin:0 0 9px;line-height:1.6}
+
+/* A compact role rail keeps permission details in one place. */
+.access-role-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:16px;align-items:start}
+.access-role-picker{min-width:0;border:1px solid var(--line);border-radius:12px;background:#f8faf3;overflow:hidden}
+.access-picker-heading{display:flex;align-items:center;justify-content:space-between;padding:13px 14px;border-bottom:1px solid var(--line)}
+.access-picker-heading>strong{font-size:12px;color:var(--forest)}
+.access-picker-heading>strong>span{margin-left:5px;font-size:10px;font-weight:500;color:var(--ink2)}
+.access-small-icon{display:grid;place-items:center;width:30px;height:30px;background:#fff;color:var(--forest);border:1px solid var(--line);border-radius:7px;cursor:pointer}
+.access-role-options{display:flex;flex-direction:column;gap:5px;padding:8px;max-height:620px;overflow:auto;scrollbar-width:thin}
+.access-role-choice{display:grid;grid-template-columns:30px minmax(0,1fr) 12px;align-items:center;gap:9px;padding:12px 9px;border:1px solid transparent;border-radius:8px;background:transparent;color:#67755a;text-align:left;cursor:pointer}
+.access-role-choice>svg{width:12px;height:12px}
+.access-role-choice strong{display:block;line-height:1.5;font-size:12px;color:var(--forest);overflow-wrap:anywhere}
+.access-role-choice small{display:block;margin-top:3px;font-size:10px;color:#7c896d}
+.access-role-symbol{display:grid;place-items:center;width:30px;height:32px;border-radius:8px;background:#edf3e2;color:#759349}
+.access-role-choice.is-selected{background:#fff;border-color:#a8bd8d;box-shadow:0 2px 4px #25442208}
+.access-role-choice.is-selected .access-role-symbol{background:var(--forest);color:var(--lime)}
+.access-role-choice:hover:not(.is-selected){background:#edf3e3}
+.access-role-detail-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px}
+.access-role-detail-head>div{min-width:0}
+.access-role-detail-head h2{margin:0 0 6px;font-family:Manrope,'DM Sans',sans-serif;font-size:19px;color:var(--forest);letter-spacing:-.4px;overflow-wrap:anywhere}
+.access-role-detail-head p{font-size:12px;line-height:1.6;margin:0;color:var(--ink2);max-width:65ch;overflow-wrap:anywhere}
+.access-role-detail-head>.btn{flex:none}
+.access-role-members{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:11px 20px;background:#f7f9f1;border-block:1px solid #e8ecdf;color:#738263;font-size:11px}
+.access-role-members>span:first-child{display:flex;gap:5px;align-items:center}
+.access-role-members>span>svg{width:14px;height:14px}
+.access-role-members strong{color:var(--forest)}
+.access-role-members>.access-text-button{margin-left:auto;font-size:11px;min-height:24px;padding:0}
+.access-permission-review{padding:17px 20px}
+.access-module-group+.access-module-group{margin-top:18px}
+.access-module-group h3{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#7c895f;margin:0 0 8px;font-weight:700}
+.access-module-group>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.access-module-row,.access-permission-option{display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:8px;min-width:0;min-height:61px;padding:10px;border:1px solid #e8ecdf;border-radius:8px;background:#fdfefb}
+.access-module-icon{display:grid;place-items:center;color:#7c9663;width:28px;height:30px;border-radius:7px;background:#f1f5e9}
+.access-module-icon svg{width:15px;height:15px}
+.access-module-copy strong{font-size:11px;line-height:1.45;font-weight:650;color:#405835;display:block}
+.access-module-copy small{font-size:10px;line-height:1.5;color:#8a927e;display:block;margin-top:3px}
+.access-permission-state{display:flex;align-items:center;gap:3px;color:#93998a;font-size:9px;white-space:nowrap}
+.access-permission-state>svg{width:12px;height:12px}
+.access-permission-state.is-allowed{color:#527e39}
+.access-role-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:12px 20px;border-top:1px solid var(--line);font-size:11px;color:var(--ink2)}
+.access-role-footer .access-text-button{font-size:11px}
+
+/* User and role editors: explicit fields, readable permissions, fixed save footer. */
+.modal.access-modal{width:min(780px,calc(100% - 24px))}
+.access-modal .modal-header{padding:20px 22px}
+.access-modal .modal-header h2{font-size:19px;color:var(--forest)}
+.access-modal .modal-header p{font-size:12px;color:var(--ink2);line-height:1.6}
+.access-modal .modal-body{padding:20px 22px}
+.access-modal .modal-footer{padding:14px 22px}
+.access-modal .field label{font-size:11px;margin-bottom:7px}
+.access-modal .field :is(input,select){height:40px;padding:8px 11px;font-size:12px}
+.access-modal .form-grid{gap:14px}
+.access-edit-person{display:flex;align-items:center;gap:12px;border:1px solid #e1e9d7;border-radius:10px;padding:12px;margin-bottom:19px;background:#f8faf3}
+.access-edit-person .admin-member-avatar{width:40px;height:40px;border-radius:11px}
+.access-edit-person>div{min-width:0;flex:1}
+.access-edit-person strong,.access-edit-person small{display:block;overflow-wrap:anywhere}
+.access-edit-person strong{font-size:13px;color:var(--forest)}
+.access-edit-person small{font-size:11px;color:var(--ink2);margin-top:3px}
+.access-user-preview{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:5px}
+.access-preview-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 15px;border-bottom:1px solid #e5eade;background:#f7f9f1;color:#7d975e}
+.access-preview-head strong{font-size:12px;color:var(--forest)}
+.access-preview-head p{font-size:11px;color:var(--ink2);margin:3px 0 0}
+.access-preview-modules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px 12px;padding:16px}
+.access-preview-modules>span{display:flex;align-items:center;gap:6px;font-size:11px;line-height:1.45;color:#979f8c}
+.access-preview-modules>span>svg{width:13px;height:13px}
+.access-preview-modules>span.is-allowed{color:#4d7037}
+.access-field-help{font-size:11px;color:var(--ink2);line-height:1.6;margin:12px 0}
+.access-user-preview>.access-field-help{margin:0;padding:0 16px 14px}
+.access-notice{display:flex;align-items:center;gap:9px;padding:12px 14px;margin:0 0 16px;border:1px solid #dce7cb;border-radius:8px;background:#f4f8e9;color:#617344;font-size:11px;line-height:1.6}
+.access-user-preview>.access-notice{margin:12px 14px 0}
+.access-notice strong{color:#4b6532}
+.access-permission-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:5px 0 14px}
+.access-permission-toolbar>strong{font-size:12px;font-weight:650;color:var(--forest)}
+.access-permission-toolbar>div{display:flex;align-items:center;gap:12px}
+.access-permission-toolbar button{border:0;background:none;padding:5px 0;min-height:30px;color:var(--forest);font-size:11px;cursor:pointer}
+.access-permission-toolbar button:hover{text-decoration:underline}
+.access-permission-option{cursor:pointer;transition:border-color .15s,background .15s}
+.access-permission-option:hover{border-color:#a8c18b;background:#f8fbf0}
+.access-permission-option:has(input:checked){background:#f7fbef;border-color:#c8dbb5}
+.access-permission-option input{width:17px!important;height:17px!important;min-height:0!important;padding:0!important;margin:0;accent-color:var(--forest);cursor:pointer}
+.access-permission-option:focus-within{outline:2px solid var(--success);outline-offset:2px}
+.access-modal .form-error{font-size:12px;line-height:1.6}
+.access-review-copy{font-size:13px;line-height:1.7;color:#68755c;margin:0 0 16px}
+.access-history article{display:flex;gap:12px;padding:15px 0;border-bottom:1px solid #e8ecdf}
+.access-history article:first-child{padding-top:0}
+.access-history article:last-child{border-bottom:0}
+.access-history article>div{min-width:0}
+.access-history-icon{display:grid;place-items:center;width:32px;height:32px;background:var(--lime-soft);border-radius:9px;color:#789556;flex:none}
+.access-history article strong{font-size:12px;color:var(--forest);overflow-wrap:anywhere}
+.access-history article p{margin:4px 0 6px;font-size:12px;line-height:1.6;color:var(--ink2);overflow-wrap:anywhere}
+.access-history article small{font-size:10px;color:#8e9782}
+@media(max-width:1250px){
+ .access-role-layout{grid-template-columns:210px minmax(0,1fr);gap:12px}
+ .access-module-copy small{display:none}
+ .access-permission-option .access-module-copy small{display:block}
+ .access-module-row{min-height:52px}
+}
+@media(max-width:900px){
+ .access-page{padding:18px 16px 26px}
+ .access-role-layout{grid-template-columns:1fr}
+ .access-role-options{flex-direction:row;max-height:none;overflow-x:auto}
+ .access-role-choice{min-width:200px}
+ .access-picker-heading{padding:10px 14px}
+ .access-role-detail-head{padding:17px}
+ .access-permission-review{padding:16px 17px}
+ .access-role-members{padding:11px 17px}
+}
+@media(max-width:620px){
+ .access-page-head{align-items:flex-start;flex-direction:column;gap:14px;margin-bottom:18px}
+ .access-page-head h1{font-size:24px}
+ .access-page-actions{width:100%}
+ .access-page-actions .btn{flex:1}
+ .access-navigation{gap:10px}
+ .access-navigation nav{width:100%}
+ .access-navigation nav button{flex:1;justify-content:center;padding-inline:8px;font-size:11px}
+ .access-team-summary{padding-left:3px}
+ .access-toolbar{gap:8px;padding:12px}
+ .access-search{flex-basis:100%;max-width:none}
+ .access-toolbar select{flex:1;min-width:0;max-width:none}
+ .access-list-footer{flex-wrap:wrap;padding:12px}
+ .access-list-footer>div{margin-left:auto}
+ .access-role-detail-head{align-items:flex-start;flex-direction:column;gap:12px}
+ .access-role-members{gap:10px}
+ .access-module-group>div{grid-template-columns:1fr}
+ .access-module-copy small{display:block}
+ .access-module-row{min-height:58px}
+ .access-preview-modules{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .access-modal .modal-header,.access-modal .modal-body,.access-modal .modal-footer{padding:16px}
+ .access-modal .form-grid{grid-template-columns:1fr}
+ .access-edit-person{gap:9px;flex-wrap:wrap}
+ .access-permission-toolbar{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){.access-page *,.access-modal *{transition:none!important}}
+

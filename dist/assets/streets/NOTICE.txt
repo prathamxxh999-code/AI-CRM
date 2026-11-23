@@ -1,0 +1,16 @@
+Street geometry: © OpenStreetMap contributors.
+Source: https://www.openstreetmap.org/
+License: Open Data Commons Open Database License (ODbL) 1.0.
+License and attribution: https://www.openstreetmap.org/copyright
+
+These city-centre extracts are a derived database distributed under ODbL 1.0.
+They contain roads and, where available in the extract, parks, waterways and building footprints.
+The source snapshot dates and feature counts are recorded per city in manifest.json.
+Generated with scripts/build-city-streets.mjs using the public Overpass API.
+Pune building coverage was expanded with scripts/extend-pune-buildings.mjs to cover
+the demo offices and surrounding neighbourhoods. The building bounds and separate
+snapshot date are recorded in manifest.json. Heights use OSM height/level tags
+where available, with estimates elsewhere; display depth is enhanced at wide zoom.
+
+Client names and client/branch coordinates are separate CRM records. Street data does
+not establish or verify the address of any client or branch.
